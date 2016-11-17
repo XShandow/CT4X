@@ -21,7 +21,7 @@ public class Root_CT4XController {
 	}
 
 	/**
-	 *PFX->JKS按钮
+	 *PFX->JKS按钮 点击事件
 	 *PFX2JKS.fxml 替换原来的Pane
 	 */
 	@FXML

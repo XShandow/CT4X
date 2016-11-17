@@ -6,33 +6,33 @@ import com.security.sansec.app.CT4X;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Dialog;
+import javafx.stage.StageStyle;
 
 public class RootLayoutController {
 
 	private CT4X ct4x;
 
-	/**
-	 *  Is called by the main application to give a reference back to itself.
-	 * @param mainApp
-	 */
 	public void setMainApp(CT4X ct4x){
 		this.ct4x = ct4x;
 	}
 
-
-    /**
-     * Opens an about dialog.
-     */
+	/**
+	 *关于按钮点击事件
+	 */
     @FXML
     private void handleAbout() {
     	Alert dlg = new Alert(AlertType.INFORMATION);
-    	dlg.setTitle("Example");
-        dlg.getDialogPane().setContentText("V1");
+    	String optionalMasthead = "关于";
+    	dlg.getDialogPane().setHeaderText(optionalMasthead);
+    	dlg.getDialogPane().setContentText("Crypto Tool for Xshandow V[?]");
+    	Dialog<?> dialog = dlg;
+    	dialog.initStyle(StageStyle.UNDECORATED);
         dlg.show();
     }
 
     /**
-     * Closes the application.
+     *退出按钮点击事件
      */
     @FXML
     private void handleExit() {
