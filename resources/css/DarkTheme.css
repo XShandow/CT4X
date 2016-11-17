@@ -1,0 +1,23 @@
+.background {
+     -fx-background-image: url("../images/background.jpg");
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-family:  15pt "Consolas";
+    -fx-font-weight: bold;
+    -fx-background-color: #428bca;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 1 );
+}
+
+.button:hover {
+    -fx-background-color: #357ebd;
+    -fx-text-fill: black;
+}
+
+.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
