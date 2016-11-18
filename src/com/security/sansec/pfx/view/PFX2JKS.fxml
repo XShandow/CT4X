@@ -6,33 +6,24 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="700.0" styleClass="background" stylesheets="@../../../../../../resources/css/DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="700.0" styleClass="background" stylesheets="@../../../../../../resources/css/DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.security.sansec.pfx.view.PFX2JKSController">
    <children>
-      <TitledPane animated="false" layoutX="12.0" layoutY="14.0" prefHeight="400.0" prefWidth="700.0" text="PFX信息" AnchorPane.bottomAnchor="320.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="250.0" prefWidth="700.0" styleClass="background" stylesheets="@../../../../../../resources/css/DarkTheme.css">
-               <children>
-                  <Label layoutX="53.0" layoutY="66.0" text="PFX文件：" AnchorPane.leftAnchor="55.0" />
-                  <TextField layoutX="124.0" layoutY="62.0" prefHeight="25.0" prefWidth="355.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="210.0" />
-                  <Button layoutX="507.0" layoutY="62.0" mnemonicParsing="false" text="浏览..." />
-                  <Label layoutX="53.0" layoutY="139.0" text="PFX密码：" AnchorPane.leftAnchor="55.0" />
-                  <PasswordField layoutX="132.0" layoutY="135.0" prefHeight="25.0" prefWidth="355.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="210.0" />
-               </children>
-            </AnchorPane>
-        </content>
-      </TitledPane>
-      <TitledPane animated="false" layoutY="287.0" text="JKS信息" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="280.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="204.0" prefWidth="700.0" styleClass="background" stylesheets="@../../../../../../resources/css/DarkTheme.css">
-               <children>
-                  <Label layoutX="63.0" layoutY="71.0" text="JKS文件：" AnchorPane.leftAnchor="55.0" />
-                  <TextField layoutX="131.0" layoutY="67.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="210.0" />
-                  <Label layoutX="58.0" layoutY="151.0" text="JKS密码：" AnchorPane.leftAnchor="55.0" />
-                  <PasswordField layoutX="135.0" layoutY="147.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="210.0" />
-               </children>
-            </AnchorPane>
-        </content>
-      </TitledPane>
-      <Button layoutX="627.0" layoutY="563.0" mnemonicParsing="false" prefWidth="70.0" text="转换" AnchorPane.leftAnchor="600.0" />
+      <Label layoutX="40.0" layoutY="42.0" text="PFX文件信息" AnchorPane.leftAnchor="35.0" />
+      <Separator layoutX="40.0" layoutY="67.0" prefWidth="200.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" />
+      <Label layoutX="63.0" layoutY="97.0" text="PFX文件：" AnchorPane.leftAnchor="50.0" />
+      <TextField fx:id="pfxPathField" editable="false" layoutX="121.0" layoutY="93.0" prefHeight="23.0" prefWidth="202.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="200.0" />
+      <Button fx:id="pfxBrowseBtn" layoutX="536.0" layoutY="93.0" mnemonicParsing="false" onAction="#handlePFXBrowse" text="浏览..." AnchorPane.rightAnchor="120.0" />
+      <Label layoutX="50.0" layoutY="158.0" text="PFX密码：" AnchorPane.leftAnchor="50.0" />
+      <PasswordField fx:id="pfxPSWField" layoutX="167.0" layoutY="154.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="200.0" />
+      <Label layoutX="35.0" layoutY="264.0" text="JKS文件信息" AnchorPane.leftAnchor="35.0" />
+      <Separator layoutX="35.0" layoutY="290.0" prefWidth="200.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" />
+      <Label layoutX="50.0" layoutY="323.0" text="JKS文件：" AnchorPane.leftAnchor="50.0" />
+      <TextField fx:id="jksPathField" editable="false" layoutX="120.0" layoutY="319.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="200.0" />
+      <Button fx:id="jksBrowseBtn" layoutX="532.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleJKSBrowse" text="浏览..." AnchorPane.rightAnchor="120.0" />
+      <Label layoutX="55.0" layoutY="382.0" text="JKS密码：" AnchorPane.leftAnchor="50.0" />
+      <PasswordField fx:id="jksPSWField" layoutX="138.0" layoutY="378.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="200.0" />
+      <Separator layoutX="35.0" layoutY="507.0" prefWidth="200.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" />
+      <Label layoutX="35.0" layoutY="481.0" text="操作" AnchorPane.leftAnchor="35.0" />
+      <Button layoutX="527.0" layoutY="539.0" mnemonicParsing="false" onAction="#handleTransform" text="   转 换    " AnchorPane.rightAnchor="110.0" />
    </children>
 </AnchorPane>
