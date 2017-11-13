@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" styleClass="background" stylesheets="@../../../../../../resources/css/DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.security.sansec.license.view.ReadLicenseController">
+   <children>
+      <Separator layoutX="39.0" layoutY="56.0" prefWidth="200.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" />
+      <Label layoutX="55.0" layoutY="34.0" text="授权读取" AnchorPane.leftAnchor="35.0" />
+      <Label layoutX="50.0" layoutY="79.0" text="授权文件：" AnchorPane.leftAnchor="50.0" />
+      <TextField fx:id="licensePathField" layoutX="126.0" layoutY="75.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="200.0" />
+      <Button layoutX="539.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleLicenseBrowse" text="浏览..." AnchorPane.rightAnchor="120.0" />
+      <Label layoutX="50.0" layoutY="129.0" text="加密密钥：" AnchorPane.leftAnchor="50.0" />
+      <TextField fx:id="licensePswTextField" layoutX="120.0" layoutY="125.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="200.0" />
+      <Separator layoutX="35.0" layoutY="204.0" prefWidth="200.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" />
+      <Label layoutX="35.0" layoutY="181.0" text="操作" AnchorPane.leftAnchor="35.0" />
+      <Button layoutX="527.0" layoutY="222.0" mnemonicParsing="false" onAction="#handleLicenseRead" prefHeight="23.0" prefWidth="79.0" text="解密" />
+      <TextArea fx:id="licenseArea" layoutX="20.0" layoutY="300.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="260.0" />
+   </children>
+</AnchorPane>

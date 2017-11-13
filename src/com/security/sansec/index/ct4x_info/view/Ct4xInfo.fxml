@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" styleClass="background" stylesheets="@../../../../../../../resources/css/DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.security.sansec.index.ct4x_info.view.Ct4xInfoController">
+   <children>
+      <Label layoutX="40.0" layoutY="42.0" text="密码机信息" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="42.0" />
+      <Separator layoutX="40.0" layoutY="67.0" prefWidth="200.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="67.0" />
+   	  <Label layoutX="63.0" layoutY="97.0" text="使用：" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="87.0" />
+      <RadioButton layoutX="120.0" layoutY="87.0" mnemonicParsing="false" text="是" />
+      <RadioButton layoutX="290.0" layoutY="87.0" mnemonicParsing="false" text="否" />
+      <Label layoutX="44.0" layoutY="118.0" text="类型：" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="113.0" />
+      <RadioButton layoutX="120.0" layoutY="113.0" mnemonicParsing="false" text="PKI密码机" AnchorPane.leftAnchor="120.0" />
+      <RadioButton layoutX="290.0" layoutY="113.0" mnemonicParsing="false" text="金融数据密码机" AnchorPane.leftAnchor="290.0" />
+      <Label layoutX="50.0" layoutY="143.0" text="配置文件：" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="143.0" />
+   	  <TextField fx:id="swxaIniPathTextField" layoutX="130.0" layoutY="328.0" prefHeight="23.0" prefWidth="373.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="207.0" AnchorPane.topAnchor="139.0" />
+      <Button layoutX="509.0" layoutY="128.0" mnemonicParsing="false" onAction="#handleIniBrowse" text="浏览..." AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="139.0" />
+      <Label layoutX="35.0" layoutY="180.0" text="Provider信息" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="180.0" />
+      <Separator layoutX="37.0" layoutY="207.0" prefWidth="200.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="202.0" />
+      <Label layoutX="47.0" layoutY="223.0" text="使用：" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="220.0" />
+      <RadioButton layoutX="120.0" layoutY="223.0" mnemonicParsing="false" text="是" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="220.0" />
+      <RadioButton layoutX="284.0" layoutY="223.0" mnemonicParsing="false" text="否" AnchorPane.leftAnchor="290.0" AnchorPane.topAnchor="220.0" />
+      <Separator layoutX="53.0" layoutY="257.0" prefWidth="200.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" />
+      <Button layoutX="567.0" layoutY="267.0" mnemonicParsing="false" onAction="#handleSave" text="保存以上信息" AnchorPane.leftAnchor="567.0" AnchorPane.rightAnchor="45.0" />
+      <Label layoutX="35.0" layoutY="301.0" text="CA信息" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="310.0" />
+      <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="593.0" layoutY="309.0" onMouseClicked="#handleAddCA" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="310.0">
+         <image>
+            <Image url="@../../../../../../../resources/images/add.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="18.0" fitWidth="35.0" layoutX="627.0" layoutY="309.0" onMouseClicked="#handleDeleteCA" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="310.0">
+         <image>
+            <Image url="@../../../../../../../resources/images/delete.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="18.0" fitWidth="35.0" layoutX="665.0" layoutY="309.0" onMouseClicked="#handleViewSelectCA" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="310.0">
+         <image>
+            <Image url="@../../../../../../../resources/images/view.png" />
+         </image>
+      </ImageView>
+      <TableView layoutX="35.0" layoutY="374.0" prefHeight="200.0" prefWidth="630.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="330.0">
+        <columns>
+        	<TableColumn prefWidth="35.0" text="ID" />
+            <TableColumn prefWidth="75.0" text="名称" />
+            <TableColumn prefWidth="55.0" text="类型" />
+            <TableColumn prefWidth="55.0" text="密钥索引" />
+          	<TableColumn prefWidth="160.0" text="密钥值" />
+          	<TableColumn prefWidth="315.0" text="证书" />
+        </columns>
+      </TableView>
+
+   </children>
+</AnchorPane>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <anttasks:AntTask xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:anttasks="http://org.eclipse.fx.ide.jdt/1.0" buildDirectory="${project}/build">
-  <deploy>
-    <application name="CT4X"/>
-    <info/>
+  <deploy packagingFormat="exe">
+    <application name="CT4X" mainclass="com.security.sansec.main.CT4X" version="1.0" toolkit="fx"/>
+    <info title="CT4X" vendor="sansec.X"/>
   </deploy>
   <signjar/>
 </anttasks:AntTask>

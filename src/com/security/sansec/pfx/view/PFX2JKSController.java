@@ -4,9 +4,10 @@ import java.io.File;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.security.sansec.app.CT4X;
-import com.security.sansec.dialg.DialogUtil;
+import com.security.sansec.main.CT4X;
 import com.security.sansec.pfx.util.PFX2JKSUtil;
+import com.security.sansec.util.DialogUtil;
+import com.security.sansec.util.FileChooserUtil;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -17,7 +18,6 @@ import javafx.stage.FileChooser;
 public class PFX2JKSController {
 
 	private CT4X ct4x;
-
 
 	public  void setMainApp(CT4X ct4x){
 		this.ct4x = ct4x;
@@ -38,40 +38,29 @@ public class PFX2JKSController {
 	private Button jksBrowseBtn;
 
 	/**
-	 *PFX浏览按钮
+	 *PFX娴忚鎸夐挳
 	 */
 	@FXML
 	private void handlePFXBrowse(){
-		FileChooser fileChooser = new FileChooser();
-		FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("PFX files (*.pfx)", "*.pfx");
-
-		fileChooser.getExtensionFilters().add(extensionFilter);
-
-		File file = fileChooser.showOpenDialog(ct4x.getPrimaryStage());
+		File  file = FileChooserUtil.openFileChooser(ct4x, "PFX files (*.pfx)", "*.pfx");
 		if (file!=null) {
 			pfxPathField.setText(file.getAbsolutePath());
 		}
-
 	}
 
 	/**
-	 *JKS浏览按钮
+	 *JKS娴忚鎸夐挳
 	 */
 	@FXML
 	private void handleJKSBrowse(){
-		FileChooser fileChooser = new FileChooser();
-		FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("JKS files (*.jks)", "*.jks");
-
-		fileChooser.getExtensionFilters().add(extensionFilter);
-
-		File file = fileChooser.showOpenDialog(ct4x.getPrimaryStage());
+		File  file = FileChooserUtil.openFileChooser(ct4x, "JKS files (*.jks)", "*.jks");
 		if (file!=null) {
 			jksPathField.setText(file.getAbsolutePath());
 		}
 	}
 
 	/**
-	 *PFX转换JKS按钮
+	 *PFX杞崲JKS鎸夐挳
 	 */
 	@FXML
 	private void handleTransform() {
@@ -81,14 +70,14 @@ public class PFX2JKSController {
 		String jksPswString = jksPSWField.getText().trim();
 
 		if (StringUtils.isBlank(pfxPathString)||StringUtils.isBlank(pfxPswString)||StringUtils.isBlank(jksPathString)||StringUtils.isBlank(jksPswString)) {
-			DialogUtil.errorDialig("参数错误", "空参数");
+			DialogUtil.errorDialig(ct4x.getPrimaryStage(),"閿欒","鍙傛暟閿欒","璇峰～鍐橮FX璺緞|PFX瀵嗙爜|JKS璺緞|JKS瀵嗙爜.");
 		}else {
 			try {
 				PFX2JKSUtil.transform(pfxPathString, pfxPswString, jksPathString, jksPswString);
 			} catch (Exception e) {
-				DialogUtil.errorDialig("转换错误", e.getMessage());
+				DialogUtil.errorDialig(ct4x.getPrimaryStage(),"閿欒","杞崲閿欒",e.getMessage());
 			}
-			DialogUtil.infoDialig("成功", "PFX转JKS成功！");
+			DialogUtil.infoDialig(ct4x.getPrimaryStage(),"鎴愬姛", "PFX杞琂KS鎴愬姛.");
 		}
 
 

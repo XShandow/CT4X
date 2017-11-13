@@ -1,27 +1,31 @@
-package com.security.sansec.app;
+package com.security.sansec.main;
 
-import com.security.sansec.app.view.Root_CT4XController;
-import com.security.sansec.app.view.WelcomeController;
-import com.security.sansec.pfx.view.PFX2JKSController;
-import com.security.sansec.app.view.Root_CT4XController;
+import com.security.sansec.main.view.Root_CT4XController;
+import com.security.sansec.welcome.view.WelcomeController;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.SplitPane;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/**
+ *
+ * All rights Reserved, Designed By SANSEC
+ * @Title:  CT4X.java
+ * @Package com.security.sansec.main
+ * @Description:    CT4X工具的主页面启动类
+ * @author: xujianchao
+ * @date:   2017年11月8日 上午10:42:43
+ * @version V1.0
+ * @Copyright: 2017  Inc. All rights reserved.
+ */
 public class CT4X extends Application {
 
 	private Stage primaryStage;
 	private BorderPane root_ct4x;
+
 
 
 	public Stage getPrimaryStage() {
@@ -44,7 +48,7 @@ public class CT4X extends Application {
 	}
 
 	/**
-	 * ��ʼ��������
+	 * 初始化主窗口
 	 */
 	public void initRootCT4X() {
 		try {

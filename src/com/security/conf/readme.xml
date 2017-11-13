@@ -1,0 +1,28 @@
+<!-- [hsm]	<used> 0:False  1:True  <type> 0:PKI 1:金融   <swsds>:swds.ini路径-->
+<!-- [provider]  used 0:False  1:True-->
+<!-- [ca] <name> CA名称 <type> 0:RSA  1:SM2
+	 [keypair]	<index> 范围：1-100 	<value> 密钥对Base64编码 RSA：  SM2：
+	 <rootcert> 证书Base64编码
+-->
+<ct4x>
+    <caset>
+        <ca name="testca1" type="1">
+            <keypair>
+                <index>10</index>
+                <value>aaaaasssssdddd</value>
+            </keypair>
+            <rootcert>cccccccccccc</rootcert>
+        </ca>
+        <ca name="testca2" type="2">
+            <keypair>
+                <index>10</index>
+                <value>aaaaasssssdddd</value>
+            </keypair>
+            <rootcert>pppppppppppp</rootcert>
+        </ca>
+    </caset>
+    <hsm type="0" used="1">
+        <swsds>C:\Users\xujianchao\Desktop\swsds.ini</swsds>
+    </hsm>
+    <provider used="1"/>
+</ct4x>

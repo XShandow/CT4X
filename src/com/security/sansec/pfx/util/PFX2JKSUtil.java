@@ -37,8 +37,8 @@ public class PFX2JKSUtil {
 		KeyStore kspkcs12 = KeyStore.getInstance("pkcs12");
 		KeyStore ksjks = KeyStore.getInstance("jks");
 
-		char[] inphrase = pfxPSW.toCharArray();		//pfxÃÜÂë
-		char[] outphrase = jksPSW.toCharArray();	//jksÃÜÂë
+		char[] inphrase = pfxPSW.toCharArray();		//pfxå¯†ç 
+		char[] outphrase = jksPSW.toCharArray();	//jkså¯†ç 
 
 		kspkcs12.load(new FileInputStream(fileIn), inphrase);
 		ksjks.load( null, outphrase);

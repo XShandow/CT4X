@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="900.0" maxWidth="1400.0" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.security.sansec.main.view.Root_CT4XController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+          	<items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleCt4xXmlFileBrowse" text="Open ct4x.xml" />
+            </items>
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+   </left>
+   <center>
+   </center>
+   <bottom>
+   </bottom>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../../../../resources/css/title-pane.css" BorderPane.alignment="CENTER">
+         <children>
+            <Accordion prefHeight="675.0" prefWidth="193.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+              <panes>
+              	<TitledPane animated="false" text="Index">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleViewCt4xInfo" prefHeight="25.0" prefWidth="170.0" text="CT4X配置信息">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="0.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </content></TitledPane>
+                <TitledPane animated="false" text="PKCS12">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+
+                           </children>
+                        </VBox>
+                     </content></TitledPane>
+                <TitledPane animated="false" prefHeight="412.0" prefWidth="196.0" text="Sansec Cert">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+
+                           </children></VBox>
+                     </content></TitledPane>
+                  <TitledPane prefHeight="200.0" prefWidth="200.0" text="KeyStore">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+	                            <Button mnemonicParsing="false" onAction="#handlePFX2JKS" prefHeight="25.0" prefWidth="170.0" text="PFX转JKS">
+	                                 <VBox.margin>
+	                                    <Insets bottom="5.0" top="0.0" />
+	                                 </VBox.margin>
+	                              </Button>
+                            	<Button mnemonicParsing="false" onAction="#handleSelfSignCert" prefHeight="25.0" prefWidth="170.0" text="自签名证书">
+                            		<VBox.margin>
+                                    	<Insets bottom="5.0" top="0.0" />
+                                 	</VBox.margin>
+                                 </Button>
+                              <Button mnemonicParsing="false" onAction="#handleJKSList" prefHeight="25.0" prefWidth="170.0" text="条目List">
+                              		<VBox.margin>
+                                    	<Insets bottom="5.0" top="0.0" />
+                                 	</VBox.margin>
+                               </Button>
+                              <Button mnemonicParsing="false" onAction="#handleLicenseRead" prefHeight="25.0" prefWidth="170.0" text="解密授权文件" >
+                              	<VBox.margin>
+                                    	<Insets bottom="5.0" top="0.0" />
+                                 	</VBox.margin>
+                               </Button>
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane prefHeight="200.0" prefWidth="200.0" text="License">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+              </panes>
+            </Accordion>
+            <Separator layoutX="194.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </left>
+   <stylesheets>
+      <URL value="@../../../../../../resources/css/DarkTheme.css" />
+      <URL value="@../../../../../../resources/css/title-pane.css" />
+   </stylesheets>
+</BorderPane>
